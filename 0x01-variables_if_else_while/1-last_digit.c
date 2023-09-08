@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
    *main - Entry point
-    *Return: Always 0 (Success)
+   *Return: Always 0 (Success)
 */
 int main(void)
 {
@@ -23,5 +23,6 @@ int main(void)
 	{
 			printf("less than 6 and not 0\n");
 		}
+
 	return (0);
 }
