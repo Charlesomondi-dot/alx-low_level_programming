@@ -43,8 +43,8 @@ int main(void)
 			b_tail = sum_tail;
 		}
 
-														
 		printf("\n");
 
 		return (0);
+
 }
