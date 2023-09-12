@@ -14,11 +14,11 @@ int main(void)
 
 	printf("%li", a);
 
-	for (counter = 1; counter <= (countto /2); counter++)
+	for (counter = 1; counter <= (countto / 2); counter++)
 	{
 		printf(", %li", b);
-		a+= b;
-		b+= a;
+		a + = b;
+		b + = a;
 	}
 
 	printf("\n");
