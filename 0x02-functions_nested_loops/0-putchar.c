@@ -16,5 +16,7 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 
+	printf("_putchar"\n)
+
 	return (0);
 }
