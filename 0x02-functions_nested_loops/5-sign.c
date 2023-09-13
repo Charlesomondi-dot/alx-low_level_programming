@@ -1,4 +1,4 @@
-nclude "alx.h"
+nclude "main.h"
 
 /**
  * print_sign - print sign of number
