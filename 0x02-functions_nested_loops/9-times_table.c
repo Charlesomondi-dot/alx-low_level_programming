@@ -1,4 +1,5 @@
 #include "stdio.h"
+#incude "main.h"
 
 /**
  * times_table - print multiplication table
