@@ -1,5 +1,5 @@
-fndef _ALX_H_
-#define _ALX_H_
+fndef main_h
+#define main_h
 
 /**
  * _putchar - writes the character c to stdout
@@ -64,7 +64,7 @@ int _abs(int);
 int print_last_digit(int);
 
 /**
- * jack_bauer - print every minute of a day
+ * charles_okal - print every minute of a day
  * Description: print minutes 00:00 to 23:59
  */
 
