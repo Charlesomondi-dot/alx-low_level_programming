@@ -1,4 +1,4 @@
-#fndef main_h
+#ifndef main_h
 #define main_h
 
 /**
@@ -64,11 +64,11 @@ int _abs(int);
 int print_last_digit(int);
 
 /**
- * charles_okal - print every minute of a day
+ * jack_bauer - print every minute of a day
  * Description: print minutes 00:00 to 23:59
  */
 
-void charles_okal(void);
+void jack_bauer(void);
 
 
 /**
