@@ -1,4 +1,5 @@
-#include "holberton.h"
+#include "alx.h"
+#include "main.h"
 
 /**
    * print_times_table - print multiplication table up to n
