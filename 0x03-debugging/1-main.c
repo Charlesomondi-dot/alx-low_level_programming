@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.c"
 
 /**
  * main - causes an infinite loop
