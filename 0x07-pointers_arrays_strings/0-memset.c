@@ -25,7 +25,6 @@ char *_memset(char *s, char b, unsigned int n)
 }
 
 /* pointer arithmetic version
-
    char *_memset(char *s, char b, unsigned int n)
    {
 
@@ -40,5 +39,5 @@ char *_memset(char *s, char b, unsigned int n)
 	}
 
 	return (s);
-    }
+	}
  */
