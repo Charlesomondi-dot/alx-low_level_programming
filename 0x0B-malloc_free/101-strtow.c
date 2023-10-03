@@ -12,11 +12,11 @@ int count_word(char*s)
 	int flag,c;
 
 	flag = 0;
-	w = 0;
+	int w = 0;
 	
 	for(c = 0; s[c] !='\0';c++)
 	{
-		if(s[c]=='')
+		if(s[c]==' ')
 			flag = 0;
 		else if(flag == 0)
 		{
@@ -41,16 +41,16 @@ char **strtow(char*str)
 	while(*(str + len))
 		len++;
 	words = count_word(str);
-	if(matrix == 0)
+	if( matrix == 0)
 		return (NULL);
 
 	matrix = (char**)malloc(sizeof(char*)*(words + 1));
-	if(matrix == NULL);
+	if(matrix == NULL)
 	return (NULL);
 
 	for(i = 0;i <= len;i++)
 	{
-		if(str[i] == '' || str[i] =='\0')
+		if(str[i] == ' ' || str[i] =='\0')
 		{
 			if(c)
 			{
