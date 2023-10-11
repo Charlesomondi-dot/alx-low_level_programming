@@ -34,9 +34,9 @@ int main(int argc, char *argv[])
 		{
 			printf("%02hhx\n", arr[i];
 					break;
-					}
-					printf("%hhx", arr[i]);
-					}
-					return(0);
-					}
+		}
+		printf("%hhx", arr[i]);
+	}
+	return(0);
+}
 
