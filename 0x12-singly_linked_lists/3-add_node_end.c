@@ -1,53 +1,62 @@
-#include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-/**
- * _strlen - find string length
- * @str: string
- * Return: length
- */
-int _strlen(const char *str)
-{
-	int len;
+typedef struct Node {
+	    char *str;
+	        struct Node *next;
+} list_t;
 
-	for (len = 0; str[len] != '\0'; len++)
-		;
-	return (len);
+list_t *add_node_end(list_t **head, const char *str) {
+	    list_t *new_node = malloc(sizeof(list_t));
+	        if (new_node == NULL) {
+			        // Memory allocation failed
+			        return NULL;
+				    }
+
+		    new_node->str = strdup(str); // Duplicate the input string
+		        if (new_node->str == NULL) {
+				        // strdup failed, free allocated memory and return NULL
+				        free(new_node);
+					        return NULL;
+						    }
+
+			    new_node->next = NULL;
+
+			        if (*head == NULL) {
+					        // If the list is empty, make the new node the head of the list
+					        *head = new_node;
+						    } else {
+							            // Find the last node and append the new node
+							            list_t *temp = *head;
+								            while (temp->next != NULL) {
+										                temp = temp->next;
+												        }
+									            temp->next = new_node;
+										        }
+
+				    return new_node;
 }
 
-/**
- * add_node_end - add node to end of linked list
- * @head: linked list
- * @str: data for new node
- * @charles coding @ alx for life
- * Return: address of new element, or NULL if failed
- */
-list_t *add_node_end(list_t **head, const char *str)
-{
-	list_t *new_node, *tmp; /* create new node */
+int main() {
+	    // Example usage of add_node_end function
+	    list_t *head = NULL;
 
-	if (str == NULL) /* validate input */
-		return (NULL);
-	if (strdup(str) == NULL) /* check if malloc errored */
-		return (NULL);
+	        // Add nodes to the list
+	        add_node_end(&head, "Hello");
+		    add_node_end(&head, "World");
+		        add_node_end(&head, "C Programming");
 
-	new_node = malloc(sizeof(list_t)); /* malloc for new node */
-	if (new_node == NULL)
-		return (NULL);
+			    // Print the list
+			    list_t *temp = head;
+			        while (temp != NULL) {
+					        printf("%s\n", temp->str);
+						        temp = temp->next;
+							    }
 
-	new_node->str = strdup(str); /* set node values */
-	new_node->len = _strlen(str);
-	new_node->next = NULL;
+				    // Free the allocated memory (not shown in the provided function)
+				    // ... Code to free the memory ...
 
-	if (*head == NULL) /* if no list nodes, set new_node to beginning */
-		*head = new_node;
-	else
-	{
-		tmp = *head;
-
-		while (tmp->next != NULL)
-			tmp = tmp->next;
-			tmp->next = new_node;
-	}
-
-	return (new_node);
+				    return 0;
 }
+
